@@ -16,7 +16,7 @@ const CurrencyDropdown = () => {
     return (
         <select>
         {codes.map(code => (
-            <option key={code} value={code}>{code}</option>
+            <option className="dropdown-currency" key={code} value={code}>{code}</option>
         ))}
         </select>
     );

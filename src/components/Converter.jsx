@@ -5,14 +5,14 @@ function Converter() {
     return (
         <div>
             <h1>Currency Converter</h1>
-            <form action="">
+            <form id='converter-form'>
                 <div >
-                    <label name="currency-label">From</label>
+                    <label name="current-currency">From</label>
                     <CurrencyDropdown />
                 </div>
 
                 <div>
-                    <label name="currency-label">To</label>
+                    <label name="target-currency">To</label>
                     <CurrencyDropdown />
                 </div>
 
