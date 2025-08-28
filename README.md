@@ -1,12 +1,32 @@
-# React + Vite
+# Currency Converter React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based Currency Converter application. So far, the project includes the core UI components and functionality setup for selecting currencies and entering amounts, excluding the conversion logic.
 
-Currently, two official plugins are available:
+## Files and Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### LandingPage.jsx
+- Displays the app title and description.  
+- Includes a (Get Started) button that navigates to the converter page.
 
-## Expanding the ESLint configuration
+### Converter.jsx
+- Contains the currency conversion form.  
+- Includes (From) and (To) currency dropdowns and an (Amount) input field.  
+- Includes a (Convert) button.  
+- Minor improvements suggested: update (label) elements to use (htmlFor) and consider passing props to dropdowns.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### CurrencyDropdown.jsx
+- Reusable dropdown component that fetches and displays currency codes.  
+- Uses 'CurrencyCodes.jsx' to populate options dynamically.  
+- Suggestions: make it a controlled component and handle loading or errors for better React state management.
+
+### CurrencyCodes.jsx
+- Async function that calls the ExchangeRate API to fetch supported currency codes.  
+- Returns an array of codes for use in dropdowns.  
+
+## Summary of Work Done
+- Created basic UI with React components.  
+- Integrated API fetching for currency codes.  
+- Set up the dropdown menus for selecting currencies.  
+- Prepared the app structure for future conversion logic.  
+- Will work on  improvements for accessibility, state management, and error handling.  
+

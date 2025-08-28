@@ -17,8 +17,8 @@ function Converter() {
                 </div>
 
                 <div>
-                    <label name="amount">Amount</label>
-                    <input type="number" name="amount" placeholder="000000" />
+                    <label htmlFor="amount">Amount</label>
+                    <input id='amount' type="number" name="amount" placeholder="000000" />
                 </div>
 
                 <div>
