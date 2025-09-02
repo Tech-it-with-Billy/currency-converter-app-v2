@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../index.css";
 import CurrencyDropdown from "./CurrencyDropdown";
 import Calculator from "./Calculator";
+import Navigation from "./navigation";
 
 function Converter() {
     const [fromCurrency, setFromCurrency] = useState("");
@@ -19,52 +20,63 @@ function Converter() {
     };
 
     return (
-        <div>
-            <h1>Currency Converter</h1>
-            <form id="converter-form" onSubmit={handleSubmit}>
-                <div>
-                    <div>
-                        <label htmlFor="from-currency">From</label>
-                        <CurrencyDropdown
-                            id="from-currency"
-                            selected={fromCurrency}
-                            onChange={(e) => setFromCurrency(e.target.value)}
+        <div class="min-h-screen flex flex-col items-center">
+            <div class="mt-10">
+                <Navigation />
+            </div>
+
+            <div class="pt-15">
+                <h1 class='p-10'>Currency Converter</h1>
+                <form id="converter-form" onSubmit={handleSubmit} class="flex flex-col">
+                    <div class="flex flex-row justify-center p-4 gap-5">
+                        <div>
+                            <label htmlFor="from-currency">From</label>
+                            <CurrencyDropdown
+                                id="from-currency"
+                                selected={fromCurrency}
+                                onChange={(e) => setFromCurrency(e.target.value)}
+                                className=""
+                            />
+                        </div>
+
+                        <div>
+                            <label htmlFor="to-currency">To</label>
+                            <CurrencyDropdown
+                                id="to-currency"
+                                selected={toCurrency}
+                                onChange={(e) => setToCurrency(e.target.value)}
+                                className=""
+                            />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row justify-center p-4 gap-2">
+                        <label htmlFor="amount" class="p-4">Amount</label>
+                        <input
+                            id="amount"
+                            type="number"
+                            name="amount"
+                            placeholder="0000"
+                            value={amount}
+                            onChange={(e) => setAmount(e.target.value)}
+                            className="w-40 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
 
-                    <div>
-                        <label htmlFor="to-currency">To</label>
-                        <CurrencyDropdown
-                            id="to-currency"
-                            selected={toCurrency}
-                            onChange={(e) => setToCurrency(e.target.value)}
-                        />
+                    <div className="p-5">
+                        <button type="submit" class=" w-40 ">
+                            Convert
+                        </button>
                     </div>
-                </div>
+                </form>
 
-                <div>
-                    <label htmlFor="amount">Amount</label>
-                    <input
-                        id="amount"
-                        type="number"
-                        name="amount"
-                        placeholder="0000"
-                        value={amount}
-                        onChange={(e) => setAmount(e.target.value)}
-                    />
-                </div>
-
-                <div>
-                <button type="submit">Convert</button>
-                </div>
-            </form>
-
-            <Calculator
-                from={fromCurrency}
-                to={toCurrency}
-                amount={amount}
-                trigger={convertTrigger}
-            />
+                <Calculator
+                    from={fromCurrency}
+                    to={toCurrency}
+                    amount={amount}
+                    trigger={convertTrigger}
+                />
+            </div>
         </div>
     );
 }
