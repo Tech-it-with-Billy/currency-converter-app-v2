@@ -9,7 +9,7 @@ function LandingPage() {
                 <Navigation />
             </div>
 
-            <div className='landing-page flex-direction: column pt-30'>
+            <div className='landing-page flex-direction: column pt-40'>
                 <h1 class='p-4'>Currency Converter</h1>
                 <p class='p-4'>Convert between currencies with live exchange rates</p>
                 <div class='p-4'>

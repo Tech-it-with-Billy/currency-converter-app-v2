@@ -25,7 +25,7 @@ function Converter() {
                 <Navigation />
             </div>
 
-            <div class="pt-15">
+            <div class="pt-25">
                 <h1 class='p-10'>Currency Converter</h1>
                 <form id="converter-form" onSubmit={handleSubmit} class="flex flex-col">
                     <div class="flex flex-row justify-center p-4 gap-5">
