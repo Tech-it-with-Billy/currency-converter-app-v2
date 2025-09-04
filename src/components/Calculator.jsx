@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const apiKey = "2f712ac9f9aba1ddd3d4227b";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 function Calculator({ from, to, amount, trigger }) {
     const [result, setResult] = useState(null);

@@ -1,4 +1,4 @@
-const apiKey = "2f712ac9f9aba1ddd3d4227b"; 
+const apiKey = import.meta.env.VITE_API_KEY;
 
 async function CurrencyCodes() {
     try {
