@@ -1,32 +1,85 @@
-# Currency Converter React App
+# Currency Converter App
 
-This is a React-based Currency Converter application. So far, the project includes the core UI components and functionality setup for selecting currencies and entering amounts, excluding the conversion logic.
+### Project Description
+The Currency Converter App is a React-based web application that enables users to easily convert between global currencies using real-time exchange rates.
+It is a project that demonstrate skills in modern frontend development, API integration, and responsive UI design.
 
-## Files and Components
+### The app features:
+- A responsive navigation bar with a custom turquoise logo and hamburger menu.
+- Dynamic currency dropdowns populated with live currency codes from the ExchangeRate API.
+- Conversion logic that calculates accurate exchange results instantly.
+- TailwindCSS for a clean and consistent user interface.
 
-### LandingPage.jsx
-- Displays the app title and description.  
-- Includes a (Get Started) button that navigates to the converter page.
+### How to Install & Run the Project
+1. Clone the repository
+    ```bash
+    git clone https://github.com/Tech-it-with-Billy/currency-converter-app-v2.git
+    cd currency-converter
 
-### Converter.jsx
-- Contains the currency conversion form.  
-- Includes (From) and (To) currency dropdowns and an (Amount) input field.  
-- Includes a (Convert) button.  
-- Minor improvements suggested: update (label) elements to use (htmlFor) and consider passing props to dropdowns.
 
-### CurrencyDropdown.jsx
-- Reusable dropdown component that fetches and displays currency codes.  
-- Uses 'CurrencyCodes.jsx' to populate options dynamically.  
-- Suggestions: make it a controlled component and handle loading or errors for better React state management.
+2. Install dependencies
+    ```bash
+    npm install
 
-### CurrencyCodes.jsx
-- Async function that calls the ExchangeRate API to fetch supported currency codes.  
-- Returns an array of codes for use in dropdowns.  
+3. Set up environment variables
 
-## Summary of Work Done
-- Created basic UI with React components.  
-- Integrated API fetching for currency codes.  
-- Set up the dropdown menus for selecting currencies.  
-- Prepared the app structure for future conversion logic.  
-- Will work on  improvements for accessibility, state management, and error handling.  
+4. Create a `.env` file in the root directory
 
+5. Add your ExchangeRate API key:
+    ```bash
+    VITE_API_KEY=your_api_key_here
+
+6. Run the development server
+    ```bash
+    npm run dev
+
+7. Open the app in your browser:
+    `http://localhost:5173`
+
+### Features
+
+- Convert between any two supported currencies with live exchange rates
+- Currency dropdowns populated dynamically from the API
+- Responsive UI styled with TailwindCSS
+- Hamburger menu navigation visible on all screen sizes
+- Custom turquoise logo branding
+- Fast build & hot reload with Vite
+
+### Tech Stack Used
+- React – Frontend library
+- Vite – Build tool & dev server
+- TailwindCSS – Utility-first CSS framework
+- ExchangeRate API – Provides live currency rates
+- Lucide-react – For icons (hamburger menu)
+
+### Project Structure
+currency-converter/
+│── public/     
+│── src/
+│   ├── components/   
+│   │   ├── Navigation.jsx
+│   │   ├── LandingPage.jsx
+│   │   ├── Converter.jsx
+│   │   ├── CurrencyDropdown.jsx
+│   │   ├── CurrencyCodes.jsx
+│   │   └── Calculator.jsx
+│   ├── img/            
+│   ├── App.jsx        
+│   ├── index.css       
+│   └── main.jsx        
+│── .env 
+│── package.json
+│── vite.config.js
+└── README.md
+
+### Future Improvements
+- Add offline support with cached exchange rates
+- Show historical charts of currency fluctuations
+- Multi-language support for global users
+- Add unit & integration tests for better reliability
+
+### Limitations / Known Issues
+- API free tier may have limited requests per day
+- Requires an internet connection to fetch live rates
+- No user authentication / personalization yet
+- Limited error handling in extreme network failures
