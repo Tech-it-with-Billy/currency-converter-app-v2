@@ -1,5 +1,7 @@
 # Currency Converter App
 
+Interact with the app [here](https://currency-converter-app-v2-bo.vercel.app/)
+
 ### Project Description
 The Currency Converter App is a React-based web application that enables users to easily convert between global currencies using real-time exchange rates.
 It is a project that demonstrate skills in modern frontend development, API integration, and responsive UI design.
@@ -53,24 +55,26 @@ It is a project that demonstrate skills in modern frontend development, API inte
 - Lucide-react – For icons (hamburger menu)
 
 ### Project Structure
-currency-converter/
-│── public/     
-│── src/
-│   ├── components/   
-│   │   ├── Navigation.jsx
-│   │   ├── LandingPage.jsx
-│   │   ├── Converter.jsx
-│   │   ├── CurrencyDropdown.jsx
-│   │   ├── CurrencyCodes.jsx
-│   │   └── Calculator.jsx
-│   ├── img/            
-│   ├── App.jsx        
-│   ├── index.css       
-│   └── main.jsx        
-│── .env 
-│── package.json
-│── vite.config.js
-└── README.md
+    ```bash
+    currency-converter/
+    │── public/            
+    │── src/
+    │   ├── components/ 
+    │   │   ├── Navigation.jsx
+    │   │   ├── LandingPage.jsx
+    │   │   ├── Converter.jsx
+    │   │   ├── CurrencyDropdown.jsx
+    │   │   ├── CurrencyCodes.jsx
+    │   │   └── Calculator.jsx
+    │   ├── img/   
+    │   ├── App.jsx  
+    │   ├── index.css   
+    │   └── main.jsx  
+    │── .env   
+    │── package.json
+    │── vite.config.js
+    └── README.md
+
 
 ### Future Improvements
 - Add offline support with cached exchange rates
